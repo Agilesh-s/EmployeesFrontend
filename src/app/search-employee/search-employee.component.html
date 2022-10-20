@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <div class="row g-3">
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <label for="" class="form-label">SEARCH EMPLOYEE</label>
+                <input type="text" class="form-control" placeholder="ENTER NAME" name="employeeName" [(ngModel)]="employeeName">
+            </div>
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <button class="btn btn-success" (click)="readValues()">SEARCH</button>
+            </div>
+        </div>
+        <div class="row g-3">
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">EMPLOYEE ID</th>
+                        <th scope="col">EMPLOYEE NAME</th>
+                        <th scope="col">DESIGNATION</th>
+                        <th scope="col">SALARY</th>
+                        <th scope="col">ADDRESS</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                      <tr *ngFor = "let i of employeeData">
+                        <td>{{i.id}}</td>
+                        <td>{{i.employeeId}}</td>
+                        <td>{{i.employeeName}}</td>
+                        <td>{{i.salary}}</td>
+                        <td>{{i.designation}}</td>
+                        <td>{{i.address}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+</div>
