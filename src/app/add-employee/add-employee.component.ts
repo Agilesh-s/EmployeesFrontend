@@ -10,16 +10,16 @@ export class AddEmployeeComponent implements OnInit {
 
   constructor(private myApi:ApiService) { }
 
-  employee_id = ""
-  employeee_name = ""
+  employeeId = ""
+  employeeName = ""
   designation = ""
   salary = ""
   address = ""
 
   readValues = ()=>{
     let data = {
-      "employee_id":this.employee_id,
-      "employee_name":this.employeee_name,
+      "employeeId":this.employeeId,
+      "employeeName":this.employeeName,
       "designation":this.designation,
       "salary":this.salary,
       "address":this.address
@@ -30,8 +30,8 @@ export class AddEmployeeComponent implements OnInit {
         alert("ADDED SUCCESSFULLY")
       }
     )
-    this.employee_id = ""
-    this.employeee_name = ""
+    this.employeeId = ""
+    this.employeeName = ""
     this.designation = ""
     this.salary = ""
     this.address = ""
