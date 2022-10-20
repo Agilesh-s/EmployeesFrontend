@@ -5,34 +5,29 @@
             <div class="row g-3">
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">EMPLOYEE ID</label>
-                    <input type="text" class="form-control" placeholder="EMPLOYEE ID" >
+                    <input type="text" class="form-control" placeholder="EMPLOYEE ID" name="employee_id" [(ngModel)]="employee_id">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">EMPLOYEE NAME</label>
-                    <input type="text" class="form-control" placeholder="EMPLOYEE NAME">
+                    <input type="text" class="form-control" placeholder="EMPLOYEE NAME" name="employeee_name" [(ngModel)]="employeee_name">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">DESIGNATION</label>
-                    <input type="text" class="form-control" placeholder="DESIGNATION" >
+                    <input type="text" class="form-control" placeholder="DESIGNATION" name="designation" [(ngModel)]="designation">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">SALARY</label>
-                    <input type="text" class="form-control" placeholder="SALARY" >
+                    <input type="text" class="form-control" placeholder="SALARY" name="salary" [(ngModel)]="salary">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form-label">ADDRESS</label>
-                    <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="ADDRESS"></textarea>
+                    <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="ADDRESS" name="address" [(ngModel)]="address"></textarea>
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <button class="btn btn-primary">SUBMIT</button>
+                    <button class="btn btn-primary" (click)="readValues()">SUBMIT</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- 
-name="emp_id" ([ngModel])="emp_id"
-name="name" ([ngModel])="name"
-name="designation" ([ngModel])="designation"
-name="salary" ([ngModel])="salary"
-name="address" ([ngModel])="address" -->
+
